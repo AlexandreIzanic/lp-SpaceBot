@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Button from "../components/ui/button";
+import Servers from "../components/Servers.astro";
+import Ecosystem from "../components/Ecosystem";
+import Update from "../components/Update.astro";
+import Footer from "../components/Footer.astro";
+import Events from "../components/Events.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="bg-[#0F172A] text-white">
+    <div class="max-w-screen-2xl m-auto px-12 flex flex-col gap-60">
+      <Header />
+      <Servers />
+
+      <Ecosystem client:load />
+      <Events />
+      <Update />
+    </div>
+    <Footer />
+
+    <div class="h-96"></div>
+  </main>
+</Layout>
